@@ -1,0 +1,74 @@
+[
+  {
+    "addr": "prgq00r9x8r3q09aj0g75wmjjr7tkvreusdp3g5tw8",
+    "prefix": "notbitcoincash",
+    "reason": "Invalid cashaddr checksum",
+    "note": "An unexpected prefix"
+  },
+  {
+    "addr": "bitcoincash:prgq00r9x8r3q09aj0g75wmjjr7tkvreusdp3g5tw8",
+    "prefix": "notbitcoincash",
+    "reason": "Invalid cashaddr prefix bitcoincash",
+    "note": "An unexpected prefix"
+  },
+  {
+    "addr": "bitcoincash:pr5vxqxg0xrwl2zvxlq9rxffqx00sm44ks62zuqyrr",
+    "prefix": "bitcoincash",
+    "reason": "Invalid cashaddr checksum",
+    "note": "Incorrect checksum"
+  },
+  {
+    "addr": "bitcoincash:pr5vxqx",
+    "prefix": "bitcoincash",
+    "reason": "Cashaddr data must be at least 8 characters long",
+    "note": "Incorrect data length"
+  },
+  {
+    "addr": "bitcoincash:qpg4nt2nwm9mm2a6s6gmcmjx2yr7c9kvta",
+    "prefix": "bitcoincash",
+    "reason": "Invalid hash size",
+    "note": "Invalid data length, too short"
+  },
+  {
+    "addr": "bitcoincash:pruptvpkmxamee0f72Sq40gm70wfr624zq0yyxtycm",
+    "prefix": "bitcoincash",
+    "reason": "cashaddr.decode: string must be lowercase or uppercase",
+    "note": "Invalid casing in data"
+  },
+  {
+    "addr": "bitcoincash:pruptvpkmxamee0f72sq40gm70wfr624zqqn4vewfdw",
+    "prefix": "bitcoincash",
+    "reason": "Excess padding",
+    "note": "Invalid padding, not expected"
+  },
+  {
+    "addr": "bitcoincash:pruptvpkmxamee0f72sq40gm70wfr624zpu8adj8t6",
+    "prefix": "bitcoincash",
+    "reason": "Non-zero padding",
+    "note": "Non zero padding, not expected"
+  },
+  {
+    "addr": ":qqqqqz9njldwwzlg9v7v53unlr4jkmx6eycaeuzs77",
+    "prefix": "bitcoincash",
+    "reason": "cashaddr.decode: symbol \":\" must be present between prefix and data only",
+    "note": "Missing prefix, however with semicolon"
+  },
+  {
+    "addr": "PrEfIx:qqqqqz9njldwwzlg9v7v53unlr4jkmx6eycaeuzs77",
+    "prefix": "PrEfIx",
+    "reason": "CashAddress: invalid prefix, string must be lowercase or uppercase",
+    "note": "Prefix has mixed case"
+  },
+  {
+    "addr": "bitcoincash:cq92bpgsb2z/dvcnmrpzqgjzkty=",
+    "prefix": "bitcoincash",
+    "reason": "Unknown letter",
+    "note": "Base64 encoding not expected"
+  },
+  {
+    "addr": "bitcoin:cash:qr6m7j9njldwwzlg9v7v53unlr4jkmx6eylep8ekg",
+    "prefix": "bitcoin:cash",
+    "reason": "Invalid cashaddr checksum",
+    "note": "Multiple separators not supported"
+  }
+]

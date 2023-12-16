@@ -1,0 +1,58 @@
+{
+  "name": "cashaddr",
+  "version": "0.0.1",
+  "description": "Bitcoin Cash CashAddr",
+  "author": "Coin Crypto Wallet <support@coin.space> (https://coin.space/)",
+  "license": "MIT",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .js --report-unused-disable-directives",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoinSpace/cashaddr.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "cash",
+    "cashaddr",
+    "bch"
+  ],
+  "dependencies": {
+    "@scure/base": "^1.1.5",
+    "@scure/btc-signer": "^1.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-coinspace": "^2.1.2",
+    "mocha": "^10.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "coinspace"
+    ],
+    "env": {
+      "browser": true
+    },
+    "parserOptions": {
+      "requireConfigFile": false,
+      "sourceType": "module"
+    },
+    "overrides": [
+      {
+        "files": [
+          "test/*"
+        ],
+        "env": {
+          "node": true,
+          "mocha": true
+        }
+      }
+    ]
+  }
+}

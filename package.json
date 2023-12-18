@@ -2,7 +2,7 @@
   "name": "cashaddr",
   "version": "0.0.1",
   "description": "Bitcoin Cash CashAddr",
-  "author": "Coin Crypto Wallet <support@coin.space> (https://coin.space/)",
+  "author": "Coin Wallet <support@coin.space> (https://coin.space/)",
   "license": "MIT",
   "main": "index.js",
   "type": "module",

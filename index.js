@@ -251,7 +251,7 @@ export function Address(network = NETWORK) {
         ...res,
         format: 'legacy',
       };
-    } catch (e) {
+    } catch {
       const res = CashAddress(network).decode(address);
       return {
         ...res,

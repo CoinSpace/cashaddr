@@ -49,9 +49,9 @@ describe('cashaddr', () => {
       });
 
       it(`throw on ${v.string} with 1 bit flipped`, () => {
-        const buffer = Buffer.from(v.string, 'utf8');
-        buffer[v.string.lastIndexOf(':') + 1] ^= 0x1; // flip a bit, after the prefix
-        const str = buffer.toString('utf8');
+        const bytes = new TextEncoder().encode(v.string);
+        bytes[v.string.lastIndexOf(':') + 1] ^= 0x1; // flip a bit, after the prefix
+        const str = new TextDecoder().decode(bytes);
         assert.throws(() => cashaddr.decode(str), {
           message: /^Invalid cashaddr checksum in/,
         });

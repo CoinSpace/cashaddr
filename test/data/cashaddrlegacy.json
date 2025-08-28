@@ -14,6 +14,11 @@
       "legacy": "16w1D5WRVKJuZUsSRzdLp9w3YGcgoxDXb",
       "cashaddr": "bitcoincash:qqq3728yw0y47sqn6l2na30mcw6zm78dzqre909m2r",
       "hash": "011f28e473c95f4013d7d53ec5fbc3b42df8ed10"
+    },
+    {
+      "legacy": "1PNBhotRquygGfDq26sgfgWE6bEPU9SkzW",
+      "cashaddr": "bitcoincash:qr64gmlk94eyna60lfyjjh9gafmqvwsrmuqhq20k76",
+      "hash": "f5546ff62d7249f74ffa49295ca8ea76063a03df"
     }
   ],
   "p2sh": [

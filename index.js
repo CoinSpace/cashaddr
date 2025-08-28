@@ -88,7 +88,9 @@ function cashaddrChecksum(prefix, words) {
   for (const v of words) chk = cashaddrPolymod(chk) ^ BigInt(v);
   for (let i = 0; i < 8; i++) chk = cashaddrPolymod(chk);
   chk ^= 1n;
-  return BECH_ALPHABET.encode(utils.convertRadix([Number(chk % 2n ** 40n)], 2 ** 40, 2 ** 5));
+  const checksumWords = utils.convertRadix([Number(chk % 2n ** 40n)], 2 ** 40, 2 ** 5);
+  while (checksumWords.length < 8) checksumWords.unshift(0);
+  return BECH_ALPHABET.encode(checksumWords);
 }
 
 function genCashaddr() {

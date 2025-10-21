@@ -24,8 +24,8 @@
     "bch"
   ],
   "dependencies": {
-    "@scure/base": "^1.1.5",
-    "@scure/btc-signer": "^1.1.0"
+    "@scure/btc-signer": "^1.1.0",
+    "bech32cashaddr": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^9.34.0",

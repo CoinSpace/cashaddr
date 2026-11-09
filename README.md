@@ -13,7 +13,7 @@ npm install cashaddr
 ## Usage
 
 ```js
-import { Address, NETWORK } from 'cashaddr';
+import { Address, NETWORK } from './cashaddr/index.js';
 import { hex } from '@scure/base';
 
 const hash = hex.decode('f5bf48b397dae70be82b3cca4793f8eb2b6cdac9');
@@ -41,6 +41,19 @@ console.log(legacy);
 const converted = Address(NETWORK).toCashAddress('1PQPheJQSauxRPTxzNMUco1XmoCyPoEJCp');
 console.log(converted);
 // bitcoincash:qr6m7j9njldwwzlg9v7v53unlr4jkmx6eylep8ekg2
+
+const token_address = Address(NETWORK).encode({
+  format: 'cashaddr',
+  type: 'tpkh',
+  hash,
+});
+
+// bitcoincash:zr6m7j9njldwwzlg9v7v53unlr4jkmx6eycnjehshe
+console.log( token_address );
+
+const token_decoded = Address(NETWORK).decode('bitcoincash:zr6m7j9njldwwzlg9v7v53unlr4jkmx6eycnjehshe');
+console.log(token_decoded);
+// { type: 'tpkh', hash: Uint8Array(20) [...], format: 'cashaddr' }
 ```
 
 ## License

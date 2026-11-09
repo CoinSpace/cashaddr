@@ -45,7 +45,7 @@ export const TEST_NETWORK = {
   prefix: 'bchtest',
 };
 
-export const CASHADDR_TYPE_BITS = ['pkh', 'sh'];
+export const CASHADDR_TYPE_BITS = ['pkh', 'sh', 'tpkh', 'tsh'];
 export const CASHADDR_SIZE_BITS = [20, 24, 28, 32, 40, 48, 56, 64];
 
 /**
@@ -131,7 +131,7 @@ export function Address(network = NETWORK) {
    */
   function encode(from, includePrefix = true) {
     const { type, format = 'cashaddr' } = from;
-    if (!['pkh', 'sh'].includes(type)) throw new TypeError(`Unknown address type=${type}`);
+    if (!CASHADDR_TYPE_BITS.includes(type)) throw new TypeError(`Unknown address type=${type}`);
     if (format === 'legacy') return BTCAddress(network).encode(from);
     if (format === 'cashaddr') return CashAddress(network).encode(from, includePrefix);
     throw new TypeError(`Unknown address format=${format}`);
